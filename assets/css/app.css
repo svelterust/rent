@@ -7,13 +7,16 @@
 /*  Plugins */
 @plugin "../vendor/heroicons";
 @plugin "../vendor/daisyui" {
-  themes: cmyk --default;
+  themes: false;
 }
 @plugin "../vendor/daisyui-theme" {
-  name: "cmyk";
+  name: "silk";
   default: true;
   --color-primary: oklch(50% 0.2 250);
   --color-primary-content: oklch(98% 0.02 0);
+  --color-secondary: oklch(69.651% 0.059 248.687);
+  --color-secondary-content: oklch(13.93% 0.011 248.687);
+  --color-accent: oklch(77.464% 0.062 217.469);
 }
 
 /* Add variants based on LiveView classes */

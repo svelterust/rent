@@ -4,7 +4,6 @@ defmodule Rent.Repo.Migrations.CreateUsersAuthTables do
   def change do
     create table(:users) do
       add :email, :string, null: false, collate: :nocase
-      add :hashed_password, :string
       add :confirmed_at, :utc_datetime
 
       timestamps(type: :utc_datetime)

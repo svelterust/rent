@@ -8,34 +8,36 @@ defmodule RentWeb.UserLive.Registration do
   def render(assigns) do
     ~H"""
     <Layouts.app flash={@flash} current_scope={@current_scope}>
-      <div class="mx-auto max-w-sm">
-        <div class="text-center">
-          <.header>
-            Register for an account
-            <:subtitle>
-              Already registered?
-              <.link navigate={~p"/users/log-in"} class="font-semibold text-brand hover:underline">
-                Log in
-              </.link>
-              to your account now.
-            </:subtitle>
-          </.header>
+      <div class="mx-auto max-w-md">
+        <div class="text-center mb-8">
+          <h1 class="text-3xl font-bold mb-2">Register</h1>
+          <p class="text-base-content/70">
+            Already registered?
+            <.link navigate={~p"/users/log-in"} class="font-semibold text-brand hover:underline">
+              Log in
+            </.link>
+            to your account now.
+          </p>
         </div>
 
-        <.form for={@form} id="registration_form" phx-submit="save" phx-change="validate">
-          <.input
-            field={@form[:email]}
-            type="email"
-            label="Email"
-            autocomplete="username"
-            required
-            phx-mounted={JS.focus()}
-          />
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body">
+            <.form for={@form} id="registration_form" phx-submit="save" phx-change="validate">
+              <.input
+                field={@form[:email]}
+                type="email"
+                label="Email"
+                autocomplete="username"
+                required
+                phx-mounted={JS.focus()}
+              />
 
-          <.button phx-disable-with="Creating account..." class="btn btn-primary w-full">
-            Create an account
-          </.button>
-        </.form>
+              <.button phx-disable-with="Creating account..." class="btn btn-primary w-full mt-4">
+                Create account
+              </.button>
+            </.form>
+          </div>
+        </div>
       </div>
     </Layouts.app>
     """
