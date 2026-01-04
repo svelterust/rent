@@ -13,22 +13,22 @@ defmodule RentWeb.HomeLive do
       <!-- Hero Section -->
       <section class="flex items-center justify-center bg-base-100 py-12">
         <div class="max-w-6xl mx-auto px-6 text-center">
-          <div class="mb-10">
+          <div class="mb-8">
             <span class="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
               Premium Short-Term Rentals in Egypt
             </span>
           </div>
-          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-10 text-base-content leading-tight">
+          <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 text-base-content leading-tight">
             Live Like a Local<br/>Experience Egypt
           </h1>
-          <p class="text-lg md:text-xl text-base-content/70 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p class="text-lg md:text-xl text-base-content/70 max-w-3xl mx-auto mb-10 leading-relaxed">
             Discover premium apartments in Egypt's most exclusive neighborhoods.
             <span class="whitespace-nowrap">
               <span class="text-primary font-semibold">Local prices</span> with
               <span class="text-secondary font-semibold">world-class service</span>.
             </span>
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <.link navigate="/properties" class="px-8 py-4 bg-primary text-primary-content rounded-xl font-semibold text-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg hover:shadow-xl">
               Explore Properties
             </.link>
@@ -40,7 +40,7 @@ defmodule RentWeb.HomeLive do
       </section>
 
       <!-- Madinaty Feature Section -->
-      <section class="py-16">
+      <section class="py-12">
         <div class="max-w-7xl mx-auto px-6">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -75,7 +75,7 @@ defmodule RentWeb.HomeLive do
                 View Properties in Madinaty
               </.link>
             </div>
-            <div class="relative">
+            <div class="relative hidden lg:block">
               <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 shadow-xl"></div>
             </div>
           </div>
@@ -83,10 +83,10 @@ defmodule RentWeb.HomeLive do
       </section>
 
       <!-- Rehab Feature Section -->
-      <section class="py-16">
+      <section class="py-12">
         <div class="max-w-7xl mx-auto px-6">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-2 lg:order-1 relative">
+            <div class="order-2 lg:order-1 relative hidden lg:block">
               <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 shadow-xl"></div>
             </div>
             <div class="order-1 lg:order-2">
@@ -126,7 +126,7 @@ defmodule RentWeb.HomeLive do
       </section>
 
       <!-- Mivida Feature Section -->
-      <section class="py-16">
+      <section class="py-12">
         <div class="max-w-7xl mx-auto px-6">
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -161,7 +161,7 @@ defmodule RentWeb.HomeLive do
                 View Properties in Mivida
               </.link>
             </div>
-            <div class="relative">
+            <div class="relative hidden lg:block">
               <div class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 shadow-xl"></div>
             </div>
           </div>

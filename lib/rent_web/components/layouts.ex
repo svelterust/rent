@@ -45,7 +45,7 @@ defmodule RentWeb.Layouts do
         <ul class="flex items-center gap-2">
           <%= if @current_scope && @current_scope.user do %>
             <li>
-              <.link href={~p"/users/log-out"} method={:delete} class="btn btn-ghost">
+              <.link href={~p"/users/log-out"} method="delete" class="btn btn-ghost">
                 Log out
               </.link>
             </li>
