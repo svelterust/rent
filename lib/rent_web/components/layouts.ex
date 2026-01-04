@@ -45,23 +45,23 @@ defmodule RentWeb.Layouts do
         <ul class="flex items-center gap-2">
           <%= if @current_scope && @current_scope.user do %>
             <li>
-              <.link navigate={~p"/users/settings"} class="btn btn-ghost btn-sm">
-                Settings
+              <.link href={~p"/users/log-out"} method={:delete} class="btn btn-ghost">
+                Log out
               </.link>
             </li>
             <li>
-              <.link href={~p"/users/log-out"} method={:delete} class="btn btn-primary btn-sm">
-                Log out
+              <.link navigate={~p"/users/settings"} class="btn btn-primary ">
+                Settings
               </.link>
             </li>
           <% else %>
             <li>
-              <.link navigate={~p"/users/log-in"} class="btn btn-ghost btn-sm">
+              <.link navigate={~p"/users/log-in"} class="btn btn-ghost ">
                 Log in
               </.link>
             </li>
             <li>
-              <.link navigate={~p"/users/register"} class="btn btn-primary btn-sm">
+              <.link navigate={~p"/users/register"} class="btn btn-primary ">
                 Register
               </.link>
             </li>
