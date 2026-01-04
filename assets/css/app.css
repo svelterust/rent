@@ -1,0 +1,34 @@
+/* Set up TailwindCSS */
+@import "tailwindcss" source(none);
+@source "../css";
+@source "../js";
+@source "../../lib/rent_web";
+
+/*  Plugins */
+@plugin "../vendor/heroicons";
+@plugin "../vendor/daisyui" {
+  themes: cmyk --default;
+}
+@plugin "../vendor/daisyui-theme" {
+  name: "cmyk";
+  default: true;
+  --color-primary: oklch(50% 0.2 250);
+  --color-primary-content: oklch(98% 0.02 0);
+}
+
+/* Add variants based on LiveView classes */
+@custom-variant phx-click-loading (.phx-click-loading&, .phx-click-loading &);
+@custom-variant phx-submit-loading (.phx-submit-loading&, .phx-submit-loading &);
+@custom-variant phx-change-loading (.phx-change-loading&, .phx-change-loading &);
+
+/* Use the data attribute for dark mode  */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+/* Make LiveView wrapper divs transparent for layout */
+[data-phx-session], [data-phx-teleported-src] { display: contents }
+
+/* Change font */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap');
+body {
+    font-family: Geist, sans-serif;
+}
