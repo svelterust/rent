@@ -9,8 +9,8 @@ defmodule RentWeb.UserLive.Registration do
     ~H"""
     <Layouts.app flash={@flash} current_scope={@current_scope}>
       <div class="mx-auto max-w-md">
-        <div class="text-center mb-8">
-          <h1 class="text-3xl font-bold mb-2">Register</h1>
+        <div class="text-center mb-4">
+          <h1 class="text-3xl font-bold mb-4">Register</h1>
           <p class="text-base-content/70">
             Already registered?
             <.link navigate={~p"/users/log-in"} class="font-semibold text-brand hover:underline">
@@ -20,24 +20,20 @@ defmodule RentWeb.UserLive.Registration do
           </p>
         </div>
 
-        <div class="card border-2 border-base-200">
-          <div class="card-body">
-            <.form for={@form} id="registration_form" phx-submit="save" phx-change="validate">
-              <.input
-                field={@form[:email]}
-                type="email"
-                label="Email"
-                autocomplete="username"
-                required
-                phx-mounted={JS.focus()}
-              />
+        <.form for={@form} id="registration_form" phx-submit="save" phx-change="validate">
+          <.input
+            field={@form[:email]}
+            type="email"
+            label="Email"
+            autocomplete="username"
+            required
+            phx-mounted={JS.focus()}
+          />
 
-              <.button phx-disable-with="Creating account..." class="btn btn-primary w-full mt-4">
-                Create account
-              </.button>
-            </.form>
-          </div>
-        </div>
+          <.button phx-disable-with="Creating account..." class="btn btn-primary w-full mt-2">
+            Create account
+          </.button>
+        </.form>
       </div>
     </Layouts.app>
     """

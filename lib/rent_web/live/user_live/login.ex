@@ -8,8 +8,8 @@ defmodule RentWeb.UserLive.Login do
     ~H"""
     <Layouts.app flash={@flash} current_scope={@current_scope}>
       <div class="mx-auto max-w-md">
-        <div class="text-center mb-8">
-          <h1 class="text-3xl font-bold mb-2">Log in</h1>
+        <div class="text-center mb-4">
+          <h1 class="text-3xl font-bold mb-4">Log in</h1>
           <p class="text-base-content/70">
             <%= if @current_scope do %>
               You need to reauthenticate to perform sensitive actions on your account.
@@ -23,30 +23,26 @@ defmodule RentWeb.UserLive.Login do
           </p>
         </div>
 
-        <div class="card border-2 border-base-200">
-          <div class="card-body">
-            <.form
-              :let={f}
-              for={@form}
-              id="login_form_magic"
-              action={~p"/users/log-in"}
-              phx-submit="submit_magic"
-            >
-              <.input
-                readonly={!!@current_scope}
-                field={f[:email]}
-                type="email"
-                label="Email"
-                autocomplete="email"
-                required
-                phx-mounted={JS.focus()}
-              />
-              <.button class="btn btn-primary w-full mt-4">
-                Log in to account
-              </.button>
-            </.form>
-          </div>
-        </div>
+        <.form
+          :let={f}
+          for={@form}
+          id="login_form_magic"
+          action={~p"/users/log-in"}
+          phx-submit="submit_magic"
+        >
+          <.input
+            readonly={!!@current_scope}
+            field={f[:email]}
+            type="email"
+            label="Email"
+            autocomplete="email"
+            required
+            phx-mounted={JS.focus()}
+          />
+          <.button class="btn btn-primary w-full mt-2">
+            Log in to account
+          </.button>
+        </.form>
       </div>
     </Layouts.app>
     """
