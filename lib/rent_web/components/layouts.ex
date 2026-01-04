@@ -50,7 +50,7 @@ defmodule RentWeb.Layouts do
               </.link>
             </li>
             <li>
-              <.link href={~p"/users/log-out"} method={:delete} class="btn btn-ghost btn-sm">
+              <.link href={~p"/users/log-out"} method={:delete} class="btn btn-primary btn-sm">
                 Log out
               </.link>
             </li>

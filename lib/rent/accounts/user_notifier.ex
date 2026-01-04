@@ -24,8 +24,6 @@ defmodule Rent.Accounts.UserNotifier do
   def deliver_update_email_instructions(user, url) do
     deliver(user.email, "Update email instructions", """
 
-    ==============================
-
     Hi #{user.email},
 
     You can change your email by visiting the URL below:
@@ -33,8 +31,6 @@ defmodule Rent.Accounts.UserNotifier do
     #{url}
 
     If you didn't request this change, please ignore this.
-
-    ==============================
     """)
   end
 
