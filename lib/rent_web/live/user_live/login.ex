@@ -23,7 +23,7 @@ defmodule RentWeb.UserLive.Login do
           </p>
         </div>
 
-        <div class="card bg-base-200 shadow-xl">
+        <div class="card border-2 border-base-200">
           <div class="card-body">
             <.form
               :let={f}

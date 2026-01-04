@@ -1,5 +1,14 @@
 This is a web application written using the Phoenix web framework.
 
+## Application Overview
+
+**Rent** is a short-term rental platform for premium areas in Egypt. The platform connects two types of users:
+
+- **Agents**: Can list and manage apartments/properties in premium Egyptian locations
+- **Users**: Can browse and book apartments for short-term stays
+
+The platform focuses on premium properties in Egypt's most desirable locations, providing a seamless booking experience for users and powerful management tools for agents.
+
 ## Project guidelines
 
 - Use `mix precommit` alias when you are done with all changes and fix any pending issues

@@ -31,7 +31,6 @@
 [data-phx-session], [data-phx-teleported-src] { display: contents }
 
 /* Change font */
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400..700&display=swap');
 body {
-    font-family: Geist, sans-serif;
+    font-family: "Geist", sans-serif;
 }
